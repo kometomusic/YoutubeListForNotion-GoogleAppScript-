@@ -44,6 +44,7 @@ And, click on the page you want to check to see the video and detailed informati
 ## Workflow
 
 - WorkFlow Image
+
   ![2_1](attachments/2_1.PNG)
 
 ### Why use a spreadsheet?
@@ -117,7 +118,7 @@ Column names can be arbitrary, but the data in each column will be output to a s
 
 10.  Open [My Creator Profile | Notion](https://www.notion.so/profile/integrations) and create an integration.
 
-   ![3_9](3_9.PNG)
+   ![3_9](attachments/3_9.PNG)
 
 11.  Copy 'Internal Integration Secret' and set it to `constant.gs/nt_token` in Appscript.
 
