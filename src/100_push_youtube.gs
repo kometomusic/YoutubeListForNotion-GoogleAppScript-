@@ -78,6 +78,10 @@ function getLatestYoutube() {
         dataList[i][9] = 1
       }
     }
+  } else {
+    for (var i = 0; dataList.length > i; i++) {
+      dataList[i][9] = 1
+    }
   }
   var insertRows = dataList.length;
   var insertCols = dataList[0].length;
