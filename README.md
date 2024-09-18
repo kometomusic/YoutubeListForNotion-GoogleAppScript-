@@ -38,6 +38,7 @@ For example,
   ![1_4](attachments/1_4.PNG)
 
 And, click on the page you want to check to see the video and detailed information in detail.
+
 ![1_5](attachments/1_5.PNG)
 
 ## Workflow
@@ -75,9 +76,11 @@ Column names can be arbitrary, but the data in each column will be output to a s
 3. Click on 'Extensions/Appscript' in the toolbar and create an Appscript (if you are logged in to Google with an account other than your main account, the Appscript may not open properly. In that case, please log out of all accounts, log in again, and try again).
    
 4. Copy the file name and contents of this source. (You may use any name you like for the file name.)
+
    ![3_1](attachments/3_1.PNG)
 
 5. Open the spreadsheet again, copy the following part of the URL, and set it to `constant.gs/sheet_ID` in Appscript.
+
    ![3_2](attachments/3_2.PNG)   
    ---
    ![3_3](attachments/3_3.PNG)
@@ -102,35 +105,44 @@ Column names can be arbitrary, but the data in each column will be output to a s
    ![3_5](attachments/3_5.PNG)
 
 8. Open the database in full page and copy the area circled in red in the figure below.
+
    ![3_6](attachments/3_6.PNG)
    ---
    ![3_7](attachments/3_7.PNG)
 
 9. Set to `constant.gs/nt_DB_ID` in Appscript.
+
    ![3_8](attachments/3_8.PNG)
 
 
 10.  Open [My Creator Profile | Notion](https://www.notion.so/profile/integrations) and create an integration.
+
    ![3_9](3_9.PNG)
 
 11.  Copy 'Internal Integration Secret' and set it to `constant.gs/nt_token` in Appscript.
+
    ![3_10](attachments/3_10.PNG)
    ---
    ![3_11](attachments/3_11.PNG)
 
 12. Return to your database page in Notion and set up Integration
+
    ![3_12](attachments/3_12.PNG) 
 
 13. Open `000_main.gs` in Appscript and execute Run
+
    ![3_13](attachments/3_13.PNG)
 
 14. 'Authorization required' comes up, click 'Review permissions'
+
    ![3_14](attachments/3_14.PNG)
 
 15. Select your account in 'Choose an account'
+
    ![3_15](attachments/3_15.PNG)
 
 16. If you see 'Click on 'Google hasn't verified this app', click 'Advanced', then 'Go to xxx project(unsafe)', then 'Allow' on the next message.
+
    ![3_16](attachments/3_16.PNG)
    ---
    ![3_17](attachments/3_17.PNG)
@@ -138,17 +150,20 @@ Column names can be arbitrary, but the data in each column will be output to a s
    ![3_18](attachments/3_18.PNG)
 
 17. Click on 'Services', select 'Youtube Data API v3', select Add
+
    ![3_19](attachments/3_19.PNG)
    ---
    ![3_20](attachments/3_20.PNG)
 
 18. When you execute ''Run,'' you will get the same message as in ''14.'' Repeat 14.~16.
 19. Pressing 'Run' again will reflect the data in SpreadSheet and Notion. (If the data is reflected in SpreadSheet but not in Notion, set all the updateflg columns in SpreadSheet to 1 and run again.)
+
    ![3_21](attachments/3_21.PNG)
    ---
    ![3_22](attachments/3_22.PNG)
 
 20. Click on Trriger, select Add Trigger, and set the time to run this appscript as follows to complete the configuration
+
    ![3_23](attachments/3_23.PNG)
    ---
    ![3_24](attachments/3_24.PNG)
@@ -159,6 +174,6 @@ Column names can be arbitrary, but the data in each column will be output to a s
 
 
 
-## 注意
+## Caution
 
 - Due to appscript limitations, instances cannot be run for long periods of time (maximum run time is about 5 minutes). Therefore, if you already have a large amount of data stored in youtube, data will be added to Notion 50 times per appscript. you will need to set a trigger and wait a day until all data is reflected in Notion, or set the trigger time at 10 minute intervals, etc. (You do not need to worry about this, as only the differences are reflected for data other than the first time).
